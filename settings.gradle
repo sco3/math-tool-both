@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+        mavenLocal()
+    }
+    plugins {
+        id "${quarkusPluginId}" version "${quarkusPluginVersion}"
+    }
+}
+rootProject.name='math-tool'
+include 'math-tool-common'
+include 'math-tool-sse'
+include 'math-tool-stdio'
