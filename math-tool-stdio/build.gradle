@@ -14,8 +14,11 @@ dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-qute'
     implementation 'io.quarkus:quarkus-rest-client-jackson'
-    implementation 'io.quarkiverse.mcp:quarkus-mcp-server-stdio:1.1.1'
     implementation 'io.quarkus:quarkus-arc'
+    implementation('io.quarkiverse.mcp:quarkus-mcp-server-stdio:1.1.1') {
+        exclude group: 'io.quarkiverse.mcp', module: 'quarkus-mcp-server-sse'
+    }
+    
     testImplementation 'io.quarkus:quarkus-junit5'
 }
 
