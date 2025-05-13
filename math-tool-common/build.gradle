@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'io.quarkus'
+    id 'eclipse'
 }
 
 repositories {
@@ -10,13 +11,13 @@ repositories {
 
 dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
-    implementation 'io.quarkiverse.mcp:quarkus-mcp-server-sse:1.1.1'
+    implementation 'io.quarkiverse.mcp:quarkus-mcp-server-core:1.1.1'
     implementation 'io.quarkus:quarkus-container-image-docker'
     implementation 'io.quarkus:quarkus-arc'
     testImplementation 'io.quarkus:quarkus-junit5'
 }
 
-group 'org.acme'
+group 'sco'
 version '1.0.0-SNAPSHOT'
 
 java {

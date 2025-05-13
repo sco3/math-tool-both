@@ -15,14 +15,12 @@ dependencies {
     implementation 'io.quarkus:quarkus-qute'
     implementation 'io.quarkus:quarkus-rest-client-jackson'
     implementation 'io.quarkus:quarkus-arc'
-    implementation('io.quarkiverse.mcp:quarkus-mcp-server-stdio:1.1.1') {
-        exclude group: 'io.quarkiverse.mcp', module: 'quarkus-mcp-server-sse'
-    }
+    implementation 'io.quarkiverse.mcp:quarkus-mcp-server-stdio:1.1.1'
     
     testImplementation 'io.quarkus:quarkus-junit5'
 }
 
-group 'org.acme'
+group 'sco'
 version '1.0.0-SNAPSHOT'
 
 java {

@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'io.quarkus'
+    id 'eclipse'
 }
 
 repositories {
@@ -17,7 +18,7 @@ dependencies {
     testImplementation 'io.quarkus:quarkus-junit5'
 }
 
-group 'org.acme'
+group 'sco'
 version '1.0.0-SNAPSHOT'
 
 java {

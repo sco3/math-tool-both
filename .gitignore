@@ -2,3 +2,8 @@
 build
 **/build
 **/.gradle
+**/build
+**/.tree
+**/.settings
+**/.project
+**/.classpath
