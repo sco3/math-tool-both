@@ -1,6 +1,5 @@
 plugins {
     id 'java-library'
-    id 'maven-publish'
     id 'eclipse'
 }
 
@@ -12,8 +11,6 @@ repositories {
 dependencies {
     implementation 'io.quarkiverse.mcp:quarkus-mcp-server-core:1.1.1'
     testImplementation 'io.quarkus:quarkus-junit5'
-    //compileOnly 'io.quarkus:quarkus-arc'
-    //annotationProcessor 'io.quarkus:quarkus-arc'
 }
 
 group 'sco'
@@ -37,17 +34,3 @@ compileTestJava {
 }
 
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-
-            groupId = 'sco'
-            artifactId = 'math-tool-common'
-            version = '1.0.0-SNAPSHOT'
-        }
-    }
-    repositories {
-        mavenLocal()
-    }
-}

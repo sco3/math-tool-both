@@ -10,7 +10,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'sco:math-tool-common:1.0.0-SNAPSHOT'
+    implementation project(':math-tool-common')
+    //implementation 'sco:math-tool-common:1.0.0-SNAPSHOT'
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkiverse.mcp:quarkus-mcp-server-sse:1.1.1'
     implementation 'io.quarkus:quarkus-container-image-docker'
