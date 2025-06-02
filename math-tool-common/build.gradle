@@ -1,7 +1,8 @@
 plugins {
-    id 'java'
-    id 'io.quarkus'
+    id 'java-library'
+    id 'maven-publish'
     id 'eclipse'
+    id 'org.kordamp.gradle.jandex' version '1.0.0'
 }
 
 repositories {
@@ -10,11 +11,10 @@ repositories {
 }
 
 dependencies {
-    implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkiverse.mcp:quarkus-mcp-server-core:1.1.1'
-    implementation 'io.quarkus:quarkus-container-image-docker'
-    implementation 'io.quarkus:quarkus-arc'
     testImplementation 'io.quarkus:quarkus-junit5'
+    //compileOnly 'io.quarkus:quarkus-arc'
+    //annotationProcessor 'io.quarkus:quarkus-arc'
 }
 
 group 'sco'
@@ -35,4 +35,20 @@ compileJava {
 
 compileTestJava {
     options.encoding = 'UTF-8'
+}
+
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+
+            groupId = 'sco'
+            artifactId = 'math-tool-common'
+            version = '1.0.0-SNAPSHOT'
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
 }

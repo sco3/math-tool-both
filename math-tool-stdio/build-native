@@ -1,0 +1,1 @@
+gradle build -Dquarkus.native.enabled=true
